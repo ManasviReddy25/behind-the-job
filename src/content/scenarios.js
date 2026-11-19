@@ -144,8 +144,8 @@ export const SCENARIOS = [
           { id: 'domain', label: `The sender's address matches the scheduling link's website`, kind: CORRECT, reason: `Both use brightlinehealth.org, the company's own site.`, cues: ['C14'] },
           { id: 'time', label: `It only asks him to pick a time`, kind: CORRECT, reason: `The ask is small and safe.`, cues: ['C14'] },
           { id: 'nopay', label: `No payment, no ID, no rush`, kind: CORRECT, reason: `These are the usual scam asks, and none appear.`, cues: ['C14'] },
-          { id: 'link', label: `The email has a link`, kind: NEUTRAL },
-          { id: 'stranger', label: `It comes from someone Marcus has not met`, kind: NEUTRAL },
+          { id: 'monday', label: `It arrives on a Monday morning`, kind: NEUTRAL },
+          { id: 'role', label: `The job is a billing analyst role`, kind: NEUTRAL },
           { id: 'signature', label: `A professional signature and footer`, kind: NEUTRAL },
         ],
       },
@@ -282,10 +282,10 @@ export const SCENARIOS = [
         prompt: `What would you do?`,
         feedback: {
           respond: `Replying under a deadline is what the sender wants. Pause first.`,
-          take: `Sending your Social Security number, license photo and bank details to a stranger can lead to stolen accounts and loans in your name.`,
+          take: `Sending your Social Security number, license photo and bank details to a stranger can lead to stolen accounts and loans in your name. If you already sent them, go to IdentityTheft.gov for a recovery plan.`,
           ignore: `Safe. Verifying or reporting is stronger.`,
           verify: `Strong choice. Call the company using a number from its official website and ask if the offer is real.`,
-          report: `Strong choice. Report at ReportFraud.ftc.gov. If you shared anything, tell your bank and watch your credit.`,
+          report: `Strong choice. Report at ReportFraud.ftc.gov. If you shared anything, tell your bank and go to IdentityTheft.gov for a recovery plan.`,
         },
         cues: { take: ['C25'] },
       },
@@ -786,7 +786,7 @@ export const SCENARIOS = [
     takeaway: `Never pay to get a job, even a "refundable" fee. If money was sent, act right away: for a bank transfer or Zelle, call your bank; for a card, the card issuer; for crypto, the exchange or ATM operator; for a gift card, the issuer. Report to the FTC and to ic3.gov. Support your friend without blame.`,
     takeawayCues: ['C13'],
     rule: `Never pay to get a job, even a refundable fee.`,
-    connects: `O3 and V3 (a fee, a "you passed" message and a chat app).`,
+    connects: `O3 (a "you passed" message, then a fee in a chat app) and V3 (a payment demanded to unlock earnings).`,
   },
 ]
 
