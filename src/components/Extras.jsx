@@ -17,7 +17,7 @@ export function PauseButton({ scenarioId }) {
           setOpen(true)
         }}
       >
-        Pause
+        Pause: take a minute before you answer
       </button>
       {open && (
         <p className="pause-text" role="status">

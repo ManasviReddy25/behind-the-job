@@ -365,8 +365,8 @@ p {
   padding: 8px 26px;
   font-size: 17px;
   color: var(--amber);
-  background: rgba(245, 158, 11, 0.1);
-  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(245, 158, 11, 0.8);
 }
 
 .btn-next {
